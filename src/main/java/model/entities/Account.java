@@ -1,15 +1,15 @@
-package account;
+package model.entities;
 
 public class Account {
     private Integer number;
     private String holder;
     private Double balance;
-    private double withdrawLimit;
+    private Double withdrawLimit;
 
     public Account() {
     }
 
-    public Account(Integer number, String holder, Double balance, double withdrawLimit) {
+    public Account(int number, String holder, double balance, double withdrawLimit) {
         this.number = number;
         this.holder = holder;
         this.balance = balance;
@@ -36,10 +36,6 @@ public class Account {
         return balance;
     }
 
-    public void setBalance(Double balance) {
-        this.balance = balance;
-    }
-
     public double getWithdrawLimit() {
         return withdrawLimit;
     }
@@ -53,7 +49,11 @@ public class Account {
 
     }
     public void withdraw(double amount){
-        balance -= amount;
+        if(amount ++ withdrawLimit) {
+            throw new
+        }
+
+
     }
 
 
